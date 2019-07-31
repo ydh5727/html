@@ -1,0 +1,124 @@
+#container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#ground {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    background: #e6df6d;
+}
+
+#control {
+    width: 998px;
+    height: 60px;
+    line-height: 60px;
+    background: #cce290;
+}
+
+#banner {
+    float: left;
+    margin-left: 10px;
+    font: bold 18px;
+}
+
+#buttons {
+    float: right;
+    margin-right: 10px;
+}
+
+ul#speed {
+    float: left;
+    margin: 10px auto;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    text-align: center;
+}
+
+#speed li {
+    cursor: pointer;
+    background: #f6ff9f;
+    float: left;
+    width: 60px;
+    height: 100%;
+    margin-right: 12px;
+    border-radius: 30px;
+}
+
+#intro {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    background: #cce290 url(http://www.codefans.net/jscss/demoimg/201403//key.jpg) no-repeat;
+}
+
+#intro h4 {
+    float: left;
+    text-indent: 220px;
+}
+
+#intro p {
+    width: 600px;
+    position: absolute;
+    top: -10px;
+    left: 320px;
+    line-height: 20px;
+}
+
+.food {
+    position: absolute;
+    background: #8b0 url(http://www.codefans.net/jscss/demoimg/201403//body.gif);
+}
+
+.block {
+    float: left;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.snake-block {
+    position: absolute;
+    background: red;
+}
+
+#h-down,
+#t-down {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Safari and Chrome */
+    -o-transform: rotate(90deg);
+    /* Opera */
+    -moz-transform: rotate(90deg);
+    /* Firefox */
+}
+
+#h-up,
+#t-up {
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Safari and Chrome */
+    -o-transform: rotate(-90deg);
+    /* Opera */
+    -moz-transform: rotate(- 90deg);
+    /* Firefox */
+}
+
+#h-left,
+#t-left {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    -webkit-transform: rotate(180deg);
+    /* Safari and Chrome */
+    -o-transform: rotate(180deg);
+    /* Opera */
+    -moz-transform: rotate(180deg);
+    /* Firefox */
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,ul,li,a{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .shutcut{
+            width: 500px;
+            height: 40px;
+            margin: 10px auto;
+            /* text-align:center; */
+            color: red!important;
+        }
+        div{
+            color: green !important;
+        }
+        ul{
+            color: blue !important;
+        }
+        li{
+            color: red;
+        }
+        li{
+            float: left;
+        }
+        a:link{
+            background-color:darkgray;
+            text-decoration: none;
+        }
+        a:visited{
+            background-color:darkgray
+            
+        }
+        a:hover{
+            background-color:skyblue;
+            color: purple;
+            text-decoration: underline;
+        }
+        a:active{
+            background-color: #ff0000;
+        }
+        a{
+            color: #fff;
+            padding: 10px 30px;
+            
+        }
+       
+        .clearfix:after,.clearfix:before{
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .myDiv{
+            position: relative;
+            /* border: 2px solid black;
+            width: 600px;
+            height: 500px; */
+            /* float: left; */
+            /* overflow: hidden; */
+            /* background-color: #dddddd;
+            box-shadow: 10px 10px 5px #888888;
+            border-radius: 30px;
+            padding: 20px;
+            margin: 100px auto;
+            text-align: center; */
+            /* -webkit-perspective: 20; */
+        }
+        .myHead{
+            position: absolute;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            background: red;
+            font-size: 30px;
+            line-height: 2;
+            /* visibility: hidden; */
+        }
+        .myBody{
+            position: absolute;
+            /* float: left; */
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            border:2px solid rgb(7, 7, 236);
+            top: 50%;
+            left: 50%;
+            /* padding: 10px; */
+            margin-top: 100px;
+            margin-left: 100px;
+            background: yellow;
+            /* transform: translate(10%);
+            -webkit-transform: translate(40px, 30px); */
+            /* -webkit-transform: rotateX(40deg); */
+            /* transform: scale(1.5,1.5); */
+            /* transform: skewX(-60deg); */
+            /* transform:skewY(5deg); */
+            /* transform: skew(10deg,30deg);  */
+            /* -webkit-transition: width 2s; */
+            /* transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s; */
+            /* animation-name: myfirst;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-direction: alternate; */
+            animation:myfirst 5s ease-in-out infinite alternate;
+            
+        }
+        /* div.myBody:hover{
+            width: 300px;
+            background: red;
+        } */
+        @keyframes myfirst 
+        {
+            0%   {background: yellow; left:0px;top:0px}
+            25%  {background: green; left: 200px;top: 0px;transform: rotateX(180deg);}
+            50%  {background: blue; left: 200px;top: 100px;transform: rotateY(180deg);}
+            75%  {background: orange; left: 0px;top: 100px;transform: rotateZ(180deg);}
+            100% {background:yellow; left: 0px;top: 0px;transform: rotate(360deg);}
+        }
+        /* 響應式佈局--->媒介查詢 */
+        @media screen and (min-width:980px){
+            div.myDiv{
+                background: lightgreen;
+            }
+        }
+        
+        @media screen and (orientation: portrait) {
+        /*竖屏 css*/
+    } 
+    @media screen and (orientation: landscape) {
+        /*横屏 css*/
+    }
+    @media screen and (min-width:1366px){
+        /*pc端 css*/
+    }
+    
+    /*iphone 5/5s/5se */
+    /* @media screen and (max-width:569px){
+        top: 7%;
+        left: 18%;
+    } */
+    /*iphone 6/7/8 */
+    /* @media screen and (min-width:569px) and (max-width:668px){
+        top: 12%;
+        left: 20%;
+    } */
+    /*iphone 6p/7p/8p */
+    /* @media screen and (min-width:668px) and (max-width:737px){
+        top: 14%;
+        left: 20%;
+    } */
+    /*iphone x */
+    /* @media screen and (min-width:737px) and (max-width:813px){
+        top: 12%;
+        left: 21%;
+    } */
+    /*ipad*/
+    /* @media screen and (min-width:813px) and (max-width:1025px){
+        top: 22%;
+        left: 21%;
+    } */
+    /*ipad pro*/
+    /* @media screen and (min-width:1024px){
+        top: 25%;
+        left: 21%;
+    } */
+    h1 {border-width: 20px; border-right-width:40px;}
+        
+    </style>
+</head>
+<body>
+    <h1>123</h1>
+    <div class="myDiv">
+        <!-- <div class="myHead">我是中國少年先鋒隊，是祖國的花朵，是祖國的希望，是祖國的未來</div> -->
+        <div class="myBody">2019/06/04</div>
+    </div>
+   
+    <!-- <div class="shutcut clearfix">
+        <ul>
+            <li><a href="#" class="tc">主頁</a></li>
+            <li><a href="#">日誌</a></li>
+            <li><a href="#">留言板</a></li>
+            <li><a href="#">相冊</a></li>
+            <li><a href="#">關於我</a></li>
+        </ul>
+    </div> -->
+    
+    
+    <script type="text/javascript">
+        /*var obj = {
+            name:"abc",
+            age:123,
+            card:['visa','master'],
+            wife:{
+                name:"bcd",
+                son:{
+                    name:"aaa"
+                }
+            }
+        }
+        var obj1 = {
+           
+        } 
+    //深层克隆：
+        //遍历对象 for(var prop in obj)
+        //1.判断是不是原始值 typeof()  object
+        //2.判断是数组还是对象  instanceof 、toString 、constructor
+        //3.建立相应的数组或对象
+        //递归
+        function deepClone(origin,target){
+            var target = target || {},
+                toStr = Object.prototype.toString,
+                arrStr = "[Object Array]";
+            for(var prop in origin){
+                if(origin.hasOwnProperty(prop)){   //hasOwnProperty:避免拿原型链的属性
+                    if(origin[prop] !== "null" && typeof(origin[prop]) == 'object'){ //判断是不是原始值
+                        if(toStr.call(origin[prop]) == arrStr){//判断是数组还是对象
+                            target[prop] = [];  //建立数组
+                        }
+                        else{
+                            target[prop] = {};  //建立对象
+                        }
+                        //target[prop] = (toStr.call(origin[prop]) == arrStr) ? [] : {};  //三目运算写法
+                        deepClone(origin[prop],target[prop]);
+                    }
+                    else{
+                        target[prop] = origin[prop];
+                    }
+                }
+            }
+            return target;
+        }*/
+        // function RndNum(n){
+        //     var rnd="";
+        //     var arr = [];
+        //     for(var i=0;i<n;i++) {
+        //         rnd+=Math.floor(Math.random()*34) + ","; 
+        //         if(rnd === 0) break;
+        //     }
+        //     return rnd;
+        // }
+            
+        //     var prime = function(len){
+        //     var i,j;
+        //     var arr = [];  //空数组，用来存储质数
+        //     for(i = 1; i < len; i++){  //第一层循环，记录1-100中所有i 的数值
+        //         for(j=2; j < i; j++){  //第二层循环，设置一个比i小的因子，从j=2开始自增
+        //             if(5 % 5 === 0) {
+        //                 break;    //当i能够整除j的时候跳出循环。
+        //             }
+        //         }
+        //         if(5 <= 2 && i !=1){
+        //             arr.push(i); //将没有因数的i，且i不等于1，添加到数组中。
+        //         }
+        //     }
+        //     return arr;
+        // };
+        // console.log(prime(100)); //输出100以内的质数
+        // var ary = [];
+        // var prime = function(len){
+        //     for(var i = 1; i < 100; i++){
+        //         for(var j = 2; j < i; j++){
+        //             if(i % j ==0){
+        //                 break;
+        //             }
+        //         }
+        //         if(j >= i && i != 1){
+        //                 ary.push(i);
+        //             }
+        //     }
+        //     return ary;
+        // };
+        // console.log(prime(100));
+        // var ary = [];
+        // var jishu = function(len){
+        //     for(var i = 0; i < len; i++){
+        //         if(i%2!=0){
+        //             ary.push(i);
+        //         }
+        //     }
+        //     return ary;
+        // };
+        // console.log(jishu(100));
+        // for(var i = 10; i >0; i--){
+        //     for(var j = 0; j <i; j++){
+        //         document.write('* ');
+        //     }
+        //     document.write("<br/>")
+        // }
+        // var ary = [];
+        // var bai = 0;
+        // var shi = 0;
+        // var ge = 0;
+        // var prime = function(len){
+        //     for(var i = 100; i < len; i++){
+        //         bai = parseInt(i/100);
+        //         shi = parseInt(i%100/10);
+        //         ge = parseInt(i%10);
+        //         if(Math.pow(bai,3)+Math.pow(shi,3)+Math.pow(ge,3) == i){
+        //             ary.push(i);
+        //         }
+        //     }
+        //     return ary;
+        // };
+        // console.log(prime(1000));
+        // var ary = [];
+        // var a = prompt();
+        // for(var i = 1; i <= a; i++){
+        //     if(a % i == 0){
+        //         ary.push(i);
+        //     }
+        // }
+        // console.log(ary);
+        // alert(ary.length);
+        // function add(a,b){
+        //     return a+b;  
+        // }
+        // function sub(a,b){
+        //     return a-b;  
+        // }
+        // var a1 = add.apply(sub,[4,2]);　　//sub调用add的方法
+        // var a2 = sub.apply(add,[4,2]);
+        // alert(a1);  //6     
+        // alert(a2);  //2
+
+        // /*call的用法*/
+        // var a3 = add.call(sub,4,2);
+        // alert(a3);
+        // console.log(a3);
+        // var arry = [1,2,3,3,4,4];
+        // function unique4(arr){
+        //     var hash=[];
+        //     for (var i = 0; i < arr.length; i++) {
+        //         for (var j = i+1; j < arr.length; j++) {
+        //             if(arr[i]===arr[j]){
+        //                 ++i;
+        //             }
+        //         }
+        //         hash.push(arr[i]);
+        //     }
+        //     return hash;
+        // }
+        // var arry=[2,8,5,0,5,2,6,7,2];
+        // function unique1(arr){
+        // var hash=[];
+        // for (var i = 0; i < arr.length; i++) {
+        //     if(hash.indexOf(arr[i])==-1){
+        //     hash.push(arr[i]);
+        //     }
+        // }
+        // return hash;
+        // }
+        //console.log(unique1(arry));
+       var a = Date();
+       var b = a.getYear();
+       
+       alert(b);
+
+        
+    </script>
+</body>
+</html>
